@@ -1,0 +1,11 @@
+    body {background-color: wheat; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 1px;}
+    h1   {color: rgb(30, 59, 73); position:initial}
+    h2   {color: #303030; size: 1.5rem; border-color: rgb(163, 5, 5); border-width: 5px; border-style:dashed; padding-left: 3px; padding-right: 3px; padding-top: 3px;}
+    p    {color: rgb(10, 50, 137); size:18px; box-sizing: 1px;}
+    q    {color: darkslategrey; font-style: italic; font-weight:bold ; display: block;}
+    .main-image {border: 5px solid slateblue;} 
+    ol{ list-style-type: upper-roman; }
+    a{ color: dodgerblue; }
+    a:hover{color: mediumseagreen}
+    a:visited{color: violet}
+    .skills{margin-top: 10px; margin-bottom: 10000px;}
