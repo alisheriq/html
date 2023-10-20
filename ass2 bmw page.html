@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tesla</title>
-  <link rel="icon" type="image/x-icon" href="images/tesla_logo3.png">
+  <title>BMW</title>
+  <link rel="icon" type="image/x-icon" href="images/bmw_logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                   <li class="nav-item" onclick="showAlert('You are going to Home page.')">
-                    <a class="nav-link" href="ass2 main page.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item" onclick="showAlert('You are going to BMW page.')">
                     <a class="nav-link" href="ass2 bmw page.html">BMW</a>
@@ -78,14 +78,13 @@
         </div>
       </nav>
     </div>
-
       <div class="container-fluid p-5 bg-black text-white">
         <div class="row">
-          <h1 class="display-1 text-center ">Tesla</h1>
-          <p class="h3 text-center">Here you can see models of Tesla company.</p>
+          <h1 class="display-1 text-center ">Electric BMW</h1>
+          <p class="h3 text-center">Here you can see models of BMW company.</p>
         </div>
-
-          <div id="demo" class="carousel slide text-dark" data-bs-ride="carousel">
+      
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
                   <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -94,25 +93,24 @@
               
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="images/tesla11.png" alt="tesla11" class="d-block w-100" height="600px">
+                    <img src="images/bmw2.png" alt="Los Angeles" class="d-block w-100" height="600px">
                     <div class="carousel-caption">
-                      <h3>Tesla Model S</h3>
-                      <p>Starting MSRP $74,990 </p>
+                      <h3>BMW i4</h3>
+                      <p>Starting MSRP $52,200</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="images/tesla8.png" alt="tesla8" class="d-block w-100" height="600px">
+                    <img src="images/bmw3.png" alt="Chicago" class="d-block w-100" height="600px">
                     <div class="carousel-caption">
-                      <h3>Tesla Model 3</h3>
-                      <p>Starting MSRP $40,240</p>
+                      <h3>BMW iX</h3>
+                      <p>Starting MSRP $87,100 </p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="images/tesla7.png" alt="tesla7" class="d-block w-100" height="600px">
+                    <img src="images/bmw5.jpg" alt="New York" class="d-block w-100" height="600px">
                     <div class="carousel-caption">
-                      <h3>Tesla Model Y</h3>
-                      <p>Starting MSRP $50,490</p>
+                      <h3>BMW i3</h3>
+                      <p>Starting MSRP $45,445</p>
                     </div>
                   </div>
                 </div>
@@ -124,104 +122,104 @@
                   <span class="carousel-control-next-icon"></span>
                 </button>
           </div>
-    </div>
-
-    <div class="container-fluid p-5 bg-black text-white">
-      <div class="row">
-          <p class="h1 text-center">Technical specifications</p>
       </div>
-    </div>
 
-    <div class="container-fluid p-5">
-      <div class="row">
-        <div class="tab">
-          <button class="tablinks" onclick="openCar(event, 'London')" id="defaultOpen">Model S</button>
-          <button class="tablinks" onclick="openCar(event, 'Paris')">Model 3</button>
-          <button class="tablinks" onclick="openCar(event, 'Tokyo')">Model Y</button>
+      <div class="container-fluid p-5 bg-black text-white">
+        <div class="row">
+            <p class="h1 text-center">Technical specifications</p>
         </div>
-        
-        <div id="London" class="tabcontent">
-          <h2>Tesla Model S</h2>
+      </div>
+
+      <div class="container-fluid p-5">
+        <div class="row">
+          <div class="tab">
+            <button class="tablinks" onclick="openCar(event, 'London')" id="defaultOpen">BMW i4</button>
+            <button class="tablinks" onclick="openCar(event, 'Paris')">BMW iX</button>
+            <button class="tablinks" onclick="openCar(event, 'Tokyo')">BMW i3</button>
+          </div>
+          
+          <div id="London" class="tabcontent">
+            <h2>BMW i4</h2>
             <ul>
-                <li><strong>Performance (Plaid):</strong>
-                    <ul>
-                        <li>Acceleration (0-60 mph): Under 2 seconds</li>
-                        <li>Top Speed: Over 200 mph</li>
-                        <li>Range (EPA Estimated): Over 390 miles</li>
-                    </ul>
-                </li>
-                <li><strong>Long Range:</strong>
+                <li><strong>Performance (i4 M50):</strong>
                     <ul>
                         <li>Acceleration (0-60 mph): Under 4 seconds</li>
-                        <li>Top Speed: Over 155 mph</li>
-                        <li>Range (EPA Estimated): Over 390 miles</li>
-                    </ul>
-                </li>
-                <li><strong>Interior:</strong>
-                    <ul>
-                        <li>Seating: Up to 5 adults and 2 children with rear-facing seats</li>
-                        <li>Touchscreen Display: 17-inch center touchscreen</li>
-                        <li>Autopilot: Standard with advanced driver-assistance features</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        
-        <div id="Paris" class="tabcontent">
-          <h2>Tesla Model 3</h2>
-            <ul>
-                <li><strong>Performance:</strong>
-                    <ul>
-                        <li>Acceleration (0-60 mph): Under 3 seconds</li>
-                        <li>Top Speed: Over 160 mph</li>
+                        <li>Top Speed: Over 140 mph</li>
                         <li>Range (EPA Estimated): Over 300 miles</li>
                     </ul>
                 </li>
-                <li><strong>Long Range:</strong>
+                <li><strong>i4 eDrive40:</strong>
                     <ul>
-                        <li>Acceleration (0-60 mph): Under 5 seconds</li>
-                        <li>Top Speed: Over 140 mph</li>
-                        <li>Range (EPA Estimated): Over 350 miles</li>
+                        <li>Acceleration (0-60 mph): Under 6 seconds</li>
+                        <li>Top Speed: Over 100 mph</li>
+                        <li>Range (EPA Estimated): Over 300 miles</li>
                     </ul>
                 </li>
                 <li><strong>Interior:</strong>
                     <ul>
                         <li>Seating: Up to 5 adults</li>
-                        <li>Touchscreen Display: 15-inch center touchscreen</li>
-                        <li>Autopilot: Standard with advanced driver-assistance features</li>
+                        <li>Infotainment System: iDrive 8 with a large central touchscreen</li>
+                        <li>Advanced Driver Assistance: Available with multiple features</li>
                     </ul>
                 </li>
             </ul>
-        </div>
-        
-        <div id="Tokyo" class="tabcontent">
-          <h2>Tesla Model Y</h2>
+          </div>
+          
+          <div id="Paris" class="tabcontent">
+            <h2>BMW iX</h2>
             <ul>
-                <li><strong>Performance:</strong>
+                <li><strong>Performance (iX xDrive50):</strong>
                     <ul>
-                        <li>Acceleration (0-60 mph): Under 3.5 seconds</li>
-                        <li>Top Speed: Over 150 mph</li>
+                        <li>Acceleration (0-60 mph): Under 4 seconds</li>
+                        <li>Top Speed: Over 124 mph</li>
                         <li>Range (EPA Estimated): Over 300 miles</li>
                     </ul>
                 </li>
-                <li><strong>Long Range:</strong>
+                <li><strong>iX3:</strong>
                     <ul>
-                        <li>Acceleration (0-60 mph): Under 5.0 seconds</li>
-                        <li>Top Speed: Over 135 mph</li>
-                        <li>Range (EPA Estimated): Over 330 miles</li>
+                        <li>Acceleration (0-60 mph): Under 7 seconds</li>
+                        <li>Top Speed: Over 100 mph</li>
+                        <li>Range (EPA Estimated): Over 200 miles</li>
                     </ul>
                 </li>
                 <li><strong>Interior:</strong>
                     <ul>
-                        <li>Seating: Up to 5 adults and 2 children with rear-facing seats</li>
-                        <li>Touchscreen Display: 15-inch center touchscreen</li>
-                        <li>Autopilot: Standard with advanced driver-assistance features</li>
+                        <li>Seating: Up to 5 adults</li>
+                        <li>Infotainment System: BMW iDrive with a large curved display</li>
+                        <li>Advanced Driver Assistance: Extensive suite of features</li>
                     </ul>
                 </li>
             </ul>
+          </div>
+          
+          <div id="Tokyo" class="tabcontent">
+            <h2>BMW i3</h2>
+            <ul>
+                <li><strong>i3 (discontinued):</strong>
+                    <ul>
+                        <li>Acceleration (0-60 mph): Around 7 seconds</li>
+                        <li>Top Speed: Around 93 mph</li>
+                        <li>Range (EPA Estimated): Varies by model year, typically around 100 miles</li>
+                    </ul>
+                </li>
+                <li><strong>i3s (discontinued):</strong>
+                    <ul>
+                        <li>Acceleration (0-60 mph): Around 6.8 seconds</li>
+                        <li>Top Speed: Around 100 mph</li>
+                        <li>Range (EPA Estimated): Varies by model year, typically around 100 miles</li>
+                    </ul>
+                </li>
+                <li><strong>Interior:</strong>
+                    <ul>
+                        <li>Seating: Up to 4 passengers</li>
+                        <li>Infotainment System: iDrive with a standard central display</li>
+                        <li>Advanced Driver Assistance: Limited in older models</li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
     <div class="container-fluid p-5 bg-primary text-white">
       <div class="row">
@@ -268,26 +266,26 @@
       <hr>
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="ass2 main page.html">Home</a>
+          <a class="nav-link" href="assignment2.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ass2 bmw page.html">BMW</a>
+          <a class="nav-link" href="assignment2-1.html">BMW</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ass2 tesla page.html">Tesla</a>
+          <a class="nav-link" href="assignment2-2.html">Tesla</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ass2 kia page.html">Kia</a>
+          <a class="nav-link" href="assignment2-3.html">Kia</a>
         </li>
       </ul>
     </div>
   </div>
   <script>
-      function showAlert(text) {
+    function showAlert(text) {
             alert(text+ " Click OK to continue.");
         }
 
-      function openCar(evt, carName) {
+    function openCar(evt, carName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -301,7 +299,6 @@
       evt.currentTarget.className += " active";
     }
     document.getElementById("defaultOpen").click();
-
 
     document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector("form");
@@ -335,20 +332,6 @@
             }
         });
     });
-</script>
-<script>
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
-
-  document.getElementById("toastbtn").onclick = function() {
-  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-  var toastList = toastElList.map(function(toastEl) {
-    return new bootstrap.Toast(toastEl)
-  })
-  toastList.forEach(toast => toast.show()) 
-  }
 </script>
 
 </body>
