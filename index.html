@@ -9,6 +9,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     table, th, td {border: 1px solid rgb(255, 255, 255);}
     .card {
@@ -23,9 +24,30 @@
       position: relative;
             transition: transform 0.35s;
     }
+    #animated-box {
+            width: 25%;
+            background-color: #000000;
+            position: relative;
+    }
+    .image-container {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+    .flipped-image {
+            transform: scaleX(1);
+            transition: transform 0.6s;
+        }
+        
+    .image-container:hover .flipped-image {
+            transform: scaleX(-1);
+            transition: transform 0.6s;
+        }
     </style>
 </head>
 <body>
+
   <div class="container-fluid bg-black text-white lg">
     <nav class="navbar navbar-expand-sm bg-black navbar-dark">
         <div class="collapse navbar-collapse justify-content-center">
@@ -39,7 +61,7 @@
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                   <li class="nav-item" onclick="showAlert('You are going to Home page.')">
-                    <a class="nav-link" href="ass2 main page.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item" onclick="showAlert('You are going to BMW page.')">
                     <a class="nav-link" href="ass2 bmw page.html">BMW</a>
@@ -56,13 +78,26 @@
       </nav>
     </div>
 
+
+
       <div class="container-fluid p-5 bg-black text-white">
         <div class="row">
           <h1 class="display-1 text-center ">AElectric Cars</h1>
           <p class="h3 text-center">The future of driving is Electric.</p>
-          <img src="images/tesla9.png" alt="tesla9" width=100% height="350" id="main-image" onmouseover="scaleCard(this, 1.05)" onmouseout="scaleCard(this, 1)">
+          <div class="image-container">
+            <img id="flip" src="images/tesla9.png" alt="Flipped Image" class="flipped-image" width=100% height="350" onclick="playSound()">
+        </div>
         </div>
       </div>
+      
+  <div class="container-fluid p-5 bg-black">
+    <div class="row">
+        </div>
+    </div>
+  </div>
+
+
+
       <div class="container-fluid border p-0 my-0">
         <div class="row">
             <div class="col-lg-12">
@@ -75,15 +110,15 @@
             </div>
         </div>
 
+
+
         <div class="container-fluid p-5 bg-black text-white">
           <div class="row">
-              <div class="spinner-grow text-primary"></div>
-              <div class="col text-center">
-                      <p class="h1">What we have?</p>
-              </div>
-              <div class="spinner-grow text-primary"></div>
+            <div id="animated-box"><h1 style="color: white;">What we have?</h1> </div>
           </div>
         </div>
+
+
 
         <div class="container-fluid p-5 border">
           <div class="row">
@@ -94,7 +129,7 @@
                     <h4 class="card-title">BMW</h4>
                     <p class="card-text">BMW has seamlessly merged its legendary engineering prowess with electrification, creating a lineup of electric vehicles that deliver both power and luxury.</p>
                     <div class="dropdown">
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" onclick="playSound()">
                         See models
                       </button>
                       <ul class="dropdown-menu">
@@ -113,7 +148,7 @@
                     <h4 class="card-title">Tesla</h4>
                     <p class="card-text">Experience the future of transportation with our collection of Tesla electric cars. Tesla has revolutionized the automotive industry with its cutting-edge technology, exceptional range, and incredible acceleration.</p>
                     <div class="dropdown">
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" onclick="playSound()">
                         See models
                       </button>
                       <ul class="dropdown-menu">
@@ -133,7 +168,7 @@
                     <h4 class="card-title">Kia</h4>
                     <p class="card-text">Kia has entered the electric vehicle market with a bang, offering an impressive range of affordable and eco-friendly options.</p>
                     <div class="dropdown">
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" onclick="playSound()">
                         See models
                       </button>
                       <ul class="dropdown-menu">
@@ -148,45 +183,47 @@
           </div>
       </div>
       
+
+
     <div class="container-fluid p-5 bg-black text-white">
         <div class="row">
-            <div class="spinner-grow text-primary"></div>
             <div class="col text-center">
                 <p class="h1">Why choose an electric car from our store?</p>
             </div>
-            <div class="spinner-grow text-primary"></div>
         </div>
     </div>
+
+
 
     <div class="container-fluid p-5">
         <div class="row">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
+                <li class="list-group-item" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
                     <img src="images/env.png" alt="environment" style="width:70px; height: 70px; margin-right: 20px;"; align="left">
                     <h2>Environmental Responsibility</h2>
                     <p>Electric cars produce zero tailpipe emissions, helping to reduce your carbon footprint and combat climate change.</p>
                 </li>
-                <li class="list-group-item list-group-item-light" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
+                <li class="list-group-item" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
                     <img src="images/costs.png" alt="costs" style="width:70px; height: 70px; margin-right: 20px;"; align="left">
                     <h2>Lower Operating Costs</h2>
                     <p>Electric vehicles have fewer moving parts and lower maintenance costs compared to traditional gasoline cars, making them more cost-effective1.</p>
                 </li>
-                <li class="list-group-item list-group-item-light" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
+                <li class="list-group-item" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
                     <img src="images/techno.png" alt="technology" style="width:70px; height: 70px; margin-right: 20px;"; align="left">
                     <h2>Innovative Technology</h2>
                     <p>Enjoy advanced features such as autonomous driving capabilities, state-of-the-art infotainment systems, and over-the-air software updates.</p>
                 </li>
-                <li class="list-group-item list-group-item-light" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
+                <li class="list-group-item" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
                     <img src="images/torque.png" alt="torque" style="width:70px; height: 70px; margin-right: 20px;"; align="left">
                     <h2>Instant Torque</h2>
                     <p>Electric motors provide instant torque, delivering quick and smooth acceleration for an exhilarating driving experience.</p>
                 </li>
-                <li class="list-group-item list-group-item-light" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
+                <li class="list-group-item" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
                     <img src="images/comfort.png" alt="comfort" style="width:70px; height: 70px; margin-right: 20px;"; align="left">
                     <h2>Quiet and Comfortable</h2>
                     <p>Electric cars are exceptionally quiet and offer a peaceful and comfortable ride, perfect for city commutes or long road trips.</p>
                 </li>
-                <li class="list-group-item list-group-item-light" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
+                <li class="list-group-item" onmouseover="scaleCard(this, 1.025)" onmouseout="scaleCard(this, 1)">
                     <img src="images/incentives.png" alt="incentives" style="width:70px; height: 70px; margin-right: 20px;"; align="left">
                     <h2>Government Incentives</h2>
                     <p>Take advantage of various government incentives and tax credits designed to encourage electric vehicle adoption.</p>
@@ -194,6 +231,7 @@
             </ul>
         </div>
     </div>
+
 
 
     <div class="container-fluid p-5 bg-primary text-white">
@@ -229,50 +267,73 @@
           </div>
       </div>
   </div>
+  
 
 
   <div class="container-fluid p-5 bg-black text-white">
     <div class="row">
-        <div class="col-lg-12">
-            <p class="h3">Contact Form</p>
-            <form action="/action_page.php">
-                <div class="mb-3 mt-3">
-                    <label for="name" class="form-label">Your name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-                </div>
-
-                <div class="mb-3 mt-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                </div>
-
-                <div class="mb-3 mt-3">
-                    <label for="mark" class="form-label">Preferred mark:</label>
-                    <select class="form-select">
-                        <option>Tesla</option>
-                        <option>BMW</option>
-                        <option>Kia</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
-            </form>
+        <div class="col text-center">
+            <p class="h1">Electric Car Range vs. Price</p>
         </div>
     </div>
+  </div>
+
+
+
+  <div class="container-fluid p-5">
+    <div class="row mt-4">
+        <canvas id="carScatterChart"></canvas>
+    </div>
+  </div>
+  
+
+
+<div class="container-fluid text-center">
+  <h1 class="mt-5">Help to charge the Electric Cars</h1>
+  <div class="row mt-4">
+      <div class="col-md-6">
+          <div class="border p-4">
+              <div id="charger" class="bg-primary text-white p-2">
+                  <h2>Drag the cars here to charge them!</h2>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div id="cars-container" class="d-flex flex-column">
+              <div id="Tesla" class="car bg-black text-white p-3 mb-3" draggable="true">
+                  <h2>Tesla</h2>
+                  <img src="images/teslabg2.png" style="width:40%;">
+              </div>
+              <div id="Kia" class="car bg-black text-white p-3 mb-3" draggable="true">
+                  <h2>Kia</h2>
+                  <img src="images/kiabg2.png" style="width:40%;">
+              </div>
+              <div id="BMW" class="car bg-black text-white p-3" draggable="true">
+                  <h2>BMW</h2>
+                  <img src="images/bmwbg.png" style="width:40%;">
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="win-message" class="mt-4 alert alert-success d-none">
+      Congratulations! You've charged all the electric cars!
+  </div>
 </div>
-
-
     
+
+
   <div class="container-fluid p-5">
       <h2 class="text-left">To-Do List</h2>
       <div class="input-group">
           <input type="text" id="taskInput" class="form-control" placeholder="Add a new task">
           <div class="input-group-append">
-              <button id="addTask" class="btn btn-primary onclick="showAlert('Task created.')">Add Task</button>
+              <button id="addTask" class="btn btn-primary" onclick="showAlert('Task created.')">Add Task</button>
           </div>
       </div>
       <ul id="taskList" class="list-group">
       </ul>
   </div>
+
   
 
   <div class="container-fluid p-5 bg-primary text-white">
@@ -288,10 +349,111 @@
 
 
 
+<div class="container-fluid p-5 bg-black text-white">
+  <div class="row">
+      <div class="col-lg-12">
+          <p class="h3">Contact Form</p>
+          <form action="/action_page.php">
+              <div class="mb-3 mt-3">
+                  <label for="name" class="form-label">Your name:</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+              </div>
+
+              <div class="mb-3 mt-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+              </div>
+
+              <div class="mb-3 mt-3">
+                  <label for="mark" class="form-label">Preferred mark:</label>
+                  <select class="form-select">
+                      <option>Tesla</option>
+                      <option>BMW</option>
+                      <option>Kia</option>
+                  </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
   <script>
+    // Game
+    const charger = document.getElementById('charger');
+        const cars = document.querySelectorAll('.car');
+        const winMessage = document.getElementById('win-message');
+
+        let chargedCars = 0;
+
+        cars.forEach((car) => {
+            car.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.id);
+            });
+            car.addEventListener('dragend', (e) => {
+                e.target.style.opacity = '1';
+            });
+        });
+
+        charger.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        charger.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const carId = e.dataTransfer.getData('text/plain');
+            const car = document.getElementById(carId);
+            if (car) {
+                e.target.textContent = 'Charging ' + carId;
+                chargedCars++;
+                car.style.display = 'none';
+
+                if (chargedCars === cars.length) {
+                    winMessage.classList.remove('d-none');
+                }
+            }
+        });
+    
+    // Playing a sound
+    function playSound() {
+            const audio = new Audio('sounds/discord-notification.mp3');
+            audio.play();
+        }
+    
     function showAlert(text) {
             alert(text+ " Click OK to continue.");
         }
+    // JavaScript function to animate an element in a loop
+    function animateElement() {
+            const element = document.getElementById("animated-box");
+            let position = 0;
+            const animationSpeed = 2; // Adjust this value to control animation speed
+            const maxWidth = window.innerWidth - element.offsetWidth;
+            let direction = 1; // 1 for moving right, -1 for moving left
+
+            // Function to move the element
+            function moveElement() {
+                position += animationSpeed * direction;
+                element.style.left = position + "px";
+
+                if (position >= maxWidth) {
+                    direction = -1; // Change direction when reaching the right edge
+                }
+
+                if (position <= 0) {
+                    direction = 1; // Change direction when reaching the left edge
+                }
+
+                requestAnimationFrame(moveElement);
+            }
+
+            moveElement();
+        }
+
+    // Start the animation when the page loads
+    window.onload = animateElement;
 
     $(document).ready(function() {
 
@@ -357,9 +519,9 @@
         $("#stopTimer").hide();
     }
       });
-      function scaleCard(card, scale) {
-        card.style.transform = `scale(${scale})`;
-    }
+       function scaleCard(card, scale) {
+         card.style.transform = `scale(${scale})`;
+     }
 
     document.addEventListener("DOMContentLoaded", function () {
           const form = document.querySelector("form");
@@ -405,7 +567,7 @@
       <hr>
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="ass2 main page.html">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="ass2 bmw page.html">BMW</a>
@@ -419,6 +581,7 @@
       </ul>
     </div>
   </div>
+
     <script>
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -433,5 +596,65 @@
       toastList.forEach(toast => toast.show()) 
       }
     </script>
+    <script>
+      // Sample data for the electric car range vs. price
+      const carData = [
+          { model: 'Tesla Model 3', price: 39990, range: 576 },
+          { model: 'Tesla Model S', price: 74990, range: 652 },
+          { model: 'BMW i4', price: 55400, range: 482 },
+          { model: 'BMW iX', price: 88095, range: 420 },
+          { model: 'Kia EV6', price: 40900, range: 384 },
+          { model: 'Kia EV9', price: 56395, range: 489 },
+          
+      ];
+
+      // Create labels for each data point with the car model
+      const labels = carData.map(car => car.model);
+
+      // Create a scatter plot using Chart.js
+      const ctx = document.getElementById('carScatterChart').getContext('2d');
+      const scatterChart = new Chart(ctx, {
+          type: 'scatter',
+          data: {
+              datasets: [{
+                  label: 'Electric Car Price vs. Range',
+                  data: carData.map(car => ({ x: car.range, y: car.price, label: car.model })),
+                  backgroundColor: 'rgba(0, 128, 255, 1)',
+                  borderColor: 'rgba(0, 0, 128, 1)',
+                  borderWidth: 1,
+                  pointRadius: 8, // Adjust the point size here
+              }]
+          },
+          options: {
+              scales: {
+                  x: {
+                      type: 'linear',
+                      position: 'bottom',
+                      title: {
+                          display: true,
+                          text: 'Range (km)',
+                      },
+                  },
+                  y: {
+                      type: 'linear',
+                      position: 'left',
+                      title: {
+                          display: true,
+                          text: 'Price (USD)',
+                      },
+                  }
+              },
+              plugins: {
+                  tooltip: {
+                      callbacks: {
+                          label: (context) => {
+                              return context.dataset.data[context.dataIndex].label;
+                          }
+                      }
+                  }
+              }
+          }
+      });
+  </script>
 </body>
 </html>
